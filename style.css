@@ -1,0 +1,322 @@
+/* Paragraphs font */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+/* Headings font */
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.8;
+  margin: 0;
+  color: #3a3a3a;
+  box-sizing: border-box;
+}
+
+blockquote {
+  background: #efefef;
+  border-left: 10px solid #f87171;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+
+code {
+  color: #4791b3;
+  display: inline-block;
+  font-size: 1.2em;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: "Rubik", sans-serif;
+  font-size: 3.9em;
+  color: white;
+}
+
+h2 {
+  font-family: "Rubik", sans-serif;
+  font-size: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 300ms ease-in-out;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Swinging box */
+
+.box-logo {
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border: 2px dashed white;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  animation: swinging 1.8s infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes swinging {
+  0% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
+}
+
+/* Custom CSS */
+
+/* Heading Section */
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ff5a5a;
+  width: 100%;
+}
+
+.heading > img {
+  width: 12vw;
+  height: auto;
+}
+
+.heading > p {
+  margin-top: 0;
+  margin-bottom: 2em;
+  color: white;
+  text-align: center;
+}
+
+.button {
+  background-color: #efefef;
+  color: inherit;
+  border-radius: 10px;
+  padding: 0.7em;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bolder;
+  transition: all 400ms ease-in-out;
+}
+
+.button:hover {
+  box-shadow: 12px 12px 2px 0 #3a3a3a;
+  color: #ff5a5a;
+  opacity: 1;
+}
+
+/* Sidebar */
+
+.wrapper {
+  display: flex;
+  position: relative;
+}
+
+.sidebar-wrap {
+  min-height: 100vh;
+  flex: 0.5;
+  background-color: #efefef;
+  margin-right: 2em; /* To add a separation to the main content */
+}
+
+.sidebar-content {
+  padding-top: 0.1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  margin: 0 0.5rem;
+}
+
+.sidebar-content > img {
+  width: 150px;
+  height: auto;
+  margin-top: 2rem;
+}
+
+.sidebar-content p {
+  font-weight: bold;
+}
+
+.sidebar-content > ul {
+  line-height: 2.5;
+  padding-inline-start: 0;
+  list-style: none;
+}
+
+.sidebar-content li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-content li {
+  border-color: transparent;
+  transition: border 300ms ease-in-out;
+}
+
+.sidebar-content li:hover {
+  border-top: 2px dashed #4791b3;
+  border-bottom: 2px dashed #4791b3;
+}
+
+.side-footer {
+  color: #ff5a5a;
+  font-size: 0.85em;
+}
+
+/* Document Content */
+
+#main-doc {
+  flex: 2;
+}
+
+.main-content {
+  padding-top: 0.1em;
+  height: auto;
+  max-width: 65vw;
+}
+
+.main-content ul {
+  padding-left: 1rem;
+}
+
+/* Media queries */
+
+@media (max-width: 50rem) {
+  /* 800px */
+  h1 {
+    font-size: 2.5em;
+  }
+
+  .heading > img {
+    width: 120px;
+    height: auto;
+  }
+
+  .heading p {
+    font-size: 0.875rem;
+  }
+
+  .button {
+    font-size: 0.875rem;
+  }
+
+  .sidebar-wrap {
+    display: none;
+    flex: 1;
+    margin-right: 1rem;
+  }
+
+  .sidebar-content > img {
+    width: 100px;
+    height: auto;
+  }
+
+  .sidebar-content > ul {
+    font-size: 0.75rem;
+  }
+
+  .sidebar-content p,
+  .sidebar-content h4 {
+    font-size: 0.8rem;
+    max-width: 80%;
+    margin: 0.8rem auto;
+  }
+
+  .ham-menu {
+    display: block;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .main-content {
+    max-width: 100%;
+    margin: auto 1rem auto 0.5rem;
+  }
+  .blur {
+    filter: blur(2px);
+    transition: all 400ms ease-in-out;
+  }
+
+  .box-logo {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media (max-width: 31.25rem) {
+  /* 500 px*/
+  #main-doc p,
+  #main-doc li {
+    font-size: 0.875rem;
+  }
+}
+
+/* Hamburger menu */
+
+.ham-menu {
+  min-height: 100vh;
+  display: none;
+}
+
+#ham {
+  cursor: pointer;
+  position: sticky;
+  top: 0;
+  color: #ff5a5a;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.is-visible {
+  display: block;
+}
+
+.background {
+  background-color: #efefef;
+}
+
+.slide-in {
+  animation: slidein 200ms;
+}
+
+@keyframes slidein {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@media (max-width: 50rem) {
+  .ham-menu {
+    display: block;
+  }
+}
