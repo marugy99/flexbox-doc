@@ -11,7 +11,7 @@ The information is from MDN, I created the demos and the rest of the website.
 - Flexbox
 - Vanilla JavaScript
 
-## Author
+### Author
 
 - Twitter - [@marulucenat](https://twitter.com/marulucenat)
 
